@@ -45,13 +45,5 @@ createApp({
         changeImg(index) {
             this.activeImg = index;
         },
-        mouseLeave() {
-            setInterval(function () {
-                this.activeImg++
-            }, 1000);
-        },
-        mouseEnter() {
-            clearInterval(this.mouseLeave)
-        },
     },
 }).mount('#app')
