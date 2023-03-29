@@ -3,7 +3,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            activeImg: 2,
+            activeImg: 0,
             images: [
                 {
                     image: 'img/01.webp',
@@ -28,5 +28,19 @@ createApp({
                 }
             ]
         }
-    }
+    },
+    methods: {
+        prev() {
+            this.activeImg--
+            if (this.activeImg < 0) {
+                this.activeImg = this.images.length - 1;
+            }
+        },
+        next() {
+            this.activeImg++
+            if (this.activeImg > this.images.length) {
+                this.activeImg = 0;
+            }
+        }
+    },
 }).mount('#app')
