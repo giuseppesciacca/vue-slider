@@ -46,8 +46,8 @@
                                 <div class="container">
                                     <div class="thumbnails row flex-column justify-content-around">
                                         <div class="ps-0">
-                                            <img v-for="(image, index) in images" :src="'./assets/'+ image.image"
-                                                alt="">
+                                            <img :class="activeImg == index ? 'active_thumb' : ''"
+                                                v-for="(image, index) in images" :src="'./assets/'+ image.image" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -57,7 +57,8 @@
                                         <i class="fa-solid fa-angle-up fa-fw"></i>
                                     </button>
 
-                                    <button id="next" class="btn_down btn rounded-5 position-absolute p" @click="next">
+                                    <button id="next" class="btn_down btn rounded-5 position-absolute p-0"
+                                        @click="next">
                                         <i class="fa-solid fa-angle-down fa-fw"></i>
                                     </button>
                                 </nav>
