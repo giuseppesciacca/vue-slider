@@ -18,6 +18,10 @@ img.jumbo_el {
     height: 30px;
 }
 
+.btn:hover {
+    background-color: lightgrey !important;
+}
+
 #prev {
     top: 5%;
     left: 50%;

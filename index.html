@@ -47,7 +47,8 @@
                                     <div class="thumbnails row flex-column justify-content-around">
                                         <div class="ps-0">
                                             <img :class="activeImg == index ? 'active_thumb' : ''"
-                                                v-for="(image, index) in images" :src="'./assets/'+ image.image" alt="">
+                                                v-for="(image, index) in images" :src="'./assets/'+ image.image"
+                                                @click="changeImg(index)" alt="">
                                         </div>
                                     </div>
                                 </div>
