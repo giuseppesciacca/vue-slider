@@ -2,6 +2,8 @@ img.jumbo_el {
     width: 100%;
     height: 600px;
     object-fit: cover;
+    border: 1px outset lightgrey;
+    border-radius: 0.25rem 0 0 0.25rem;
 }
 
 .jumbo_el:not(.active) {
