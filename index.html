@@ -46,19 +46,8 @@
                                 <div class="container">
                                     <div class="thumbnails row flex-column justify-content-around">
                                         <div class="ps-0">
-                                            <img class="active_thumb" src="./assets/img/01.webp" alt="">
-                                        </div>
-                                        <div class="ps-0">
-                                            <img class="" src="./assets/img/02.webp" alt="">
-                                        </div>
-                                        <div class="ps-0">
-                                            <img class="" src="./assets/img/03.webp" alt="">
-                                        </div>
-                                        <div class="ps-0">
-                                            <img class="" src="./assets/img/04.webp" alt="">
-                                        </div>
-                                        <div class="ps-0">
-                                            <img class="" src="./assets/img/05.webp" alt="">
+                                            <img v-for="(image, index) in images.image" :src="'./assets/'+ image"
+                                                alt="">
                                         </div>
                                     </div>
                                 </div>
