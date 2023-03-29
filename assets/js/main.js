@@ -38,15 +38,20 @@ createApp({
         },
         next() {
             this.activeImg++
-            if (this.activeImg > this.images.length) {
+            if (this.activeImg == this.images.length) {
                 this.activeImg = 0;
             }
         },
         changeImg(index) {
             this.activeImg = index;
         },
+        mouseLeave() {
+            setInterval(function () {
+                this.activeImg++
+            }, 1000);
+        },
         mouseEnter() {
-            setInterval(this.activeImg++, 1000);
-        }
+            clearInterval(this.mouseLeave)
+        },
     },
 }).mount('#app')
