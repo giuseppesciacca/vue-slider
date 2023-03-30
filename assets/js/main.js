@@ -4,6 +4,7 @@ createApp({
     data() {
         return {
             activeImg: 0,
+            autoPlayId: null,
             images: [
                 {
                     image: 'img/01.webp',
@@ -31,7 +32,7 @@ createApp({
     },
     methods: {
         prev() {
-            this.activeImg--
+            this.activeImg--;
             if (this.activeImg < 0) {
                 this.activeImg = this.images.length - 1;
             }
@@ -45,5 +46,14 @@ createApp({
         changeImg(index) {
             this.activeImg = index;
         },
+        mouseLeave() {
+            this.autoPlayId = setInterval(this.next, 3000);
+        },
+        mouseEnter() {
+            clearInterval(this.autoPlayId);
+        }
+    },
+    mounted() {
+        this.mouseLeave();
     },
 }).mount('#app')

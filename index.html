@@ -27,8 +27,8 @@
                     <div class="container_images position-relative">
                         <div class="row">
                             <div class="image position-relative col-12 col-lg-10 pe-lg-0">
-                                <img class="img-fluid jumbo_el active" :src="'./assets/'+images[activeImg].image"
-                                    alt="">
+                                <img class="img-fluid jumbo_el active" :src="'./assets/'+images[activeImg].image" alt=""
+                                    @mouseenter="mouseEnter()" @mouseleave="mouseLeave()">
 
                                 <div class="card-body position-absolute">
                                     <h5 class="fw-bold px-1">{{images[activeImg].title}}</h5>

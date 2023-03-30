@@ -74,6 +74,10 @@ img.jumbo_el {
         bottom: 0%;
         left: 50%;
     }
+
+    img.jumbo_el {
+        border-radius: 0.25rem 0.25rem 0.25rem 0.25rem;
+    }
 }
 
 @media screen and (min-width: 991.98px) {
