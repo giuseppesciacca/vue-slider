@@ -64,4 +64,20 @@ img.jumbo_el {
     #thumbnails img {
         display: none;
     }
+
+    #prev {
+        top: 5%;
+        left: 50%;
+    }
+
+    #next {
+        bottom: 0%;
+        left: 50%;
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    #thumbnails {
+        position: relative;
+    }
 }

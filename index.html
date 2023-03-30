@@ -24,21 +24,21 @@
         <main id="app_main" class="py-5">
             <div class="container">
                 <div class="card">
-                    <div class="container_images">
+                    <div class="container_images position-relative">
                         <div class="row">
                             <div class="image position-relative col-12 col-lg-10 pe-lg-0">
                                 <img class="img-fluid jumbo_el active" :src="'./assets/'+images[activeImg].image"
                                     alt="">
 
                                 <div class="card-body position-absolute">
-                                    <h5 class="fw-bold">{{images[activeImg].title}}</h5>
-                                    <p class="fw-semibold">{{images[activeImg].text}}</p>
+                                    <h5 class="fw-bold px-1">{{images[activeImg].title}}</h5>
+                                    <p class="fw-semibold px-1">{{images[activeImg].text}}</p>
                                 </div>
                                 <!-- /.card-body -->
                             </div>
                             <!-- /image -->
 
-                            <div id="thumbnails" class="col-2 px-0 position-relative">
+                            <div id="thumbnails" class="col-2 px-0">
                                 <div class="container">
                                     <div class="thumbnails row flex-column justify-content-around">
                                         <div class="ps-0">
